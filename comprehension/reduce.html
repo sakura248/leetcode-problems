@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// https://coursework.vschool.io/array-reduce-exercises/
+// 1) Turn an array of numbers into a total of all the numbers
+function total(arr) {
+   // your code here
+    return arr.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+}
+console.log("Q1: ", total([1,2,3])); // 6
+
+// 2) Turn an array of numbers into a long string of all those numbers.
+function stringConcat(arr) {
+   // your code here 
+//    console.log(arr.join());
+   let result =''
+   return arr.reduce((a , b) =>  a+=b, 0)
+}
+
+console.log("Q2: ", stringConcat([1,2,3])); // "123"
+
+</script>
+</body>
+</html>
