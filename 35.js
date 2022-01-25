@@ -26,3 +26,25 @@
   return start
 
 };
+
+
+// second time
+var searchInsert = function(nums, target) {
+    let left = 0
+    let right = nums.length - 1
+    
+    if(nums[right] < target) return right + 1
+    if(nums[left] > target) return 0
+    
+    while(left <= right) {
+        let middle = left + Math.floor((right-left)/2)
+        let between = nums[middle-1] < target && target < nums[middle] // targetよりおおきく、次の値よりは小さい
+        if(nums[middle] === target || between ) return middle
+
+        if(target < nums[middle]) {
+            right = middle-1
+        } else {
+            left = middle+1
+        }
+    }
+};
